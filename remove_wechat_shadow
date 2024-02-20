@@ -1,0 +1,8 @@
+#!/bin/bash
+
+wechat_windows=`xwininfo -root -children | grep wechat.exe | grep "has no name" | awk '{printf "%s ", $1}'`
+eval "arr=($wechat_windows)"
+for wechat_window in "${arr[@]}"; do
+    xdotool windowunmap $wechat_window
+done
+

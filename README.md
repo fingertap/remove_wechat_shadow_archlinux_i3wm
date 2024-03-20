@@ -1,5 +1,7 @@
 # Remove Wechat (Wine) Shadows
 
+**NOTE: I did not expect this day comes so soon. Wine-based wechat is all history!**
+
 The wine Wechat in Arch Linux usually comes with shadow borders. I use `i3wm` and the wechat windows have shadow borders that may stay on other windows, which is ugly. One way to get rid of this shadow is to use `wine-for-wechat` in `archlinuxcn`. However, the wine it uses has many issues such as unclickable tray icon (I have to reload the i3 to click the icon when I need my wechat window back) and fcitx input box going to the upper left corner of the window.
 
 The solution I come up with is to use `com.qq.weixin.spark` and manually hide these shadow windows. They are actually auxiliary windows that lies under the main wechat windows. The script [remove_wechat_shadow](./remove_wechat_shadow) detects the shadow windows and hide them. This script requires `xwininfo` and `xdotool`, which you can install by
